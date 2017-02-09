@@ -27,12 +27,7 @@ The product of these numbers is 26 x 63 x 78 x 14 = 1788696.
 What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20x20 grid?
 """
 
-import os, sys, inspect
-# Why is this so hard?
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"tools")))
-if cmd_subfolder not in sys.path:
-     sys.path.insert(0, cmd_subfolder)
-import grid_tools
+from tools import grid_tools
 
 raw_grid = open("11.txt","r")
 text_grid = raw_grid.read()
